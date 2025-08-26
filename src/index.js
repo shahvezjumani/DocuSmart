@@ -4,7 +4,7 @@ import { connectToDatabase, disconnectFromDatabase } from "./lib/mongoose.js";
 
 (async () => {
   try {
-    await connectToDatabase();
+    // await connectToDatabase();
 
     app.listen(config.PORT, () => {
       console.log(`server running : http://localhost:${config.PORT}`);
@@ -16,7 +16,7 @@ import { connectToDatabase, disconnectFromDatabase } from "./lib/mongoose.js";
 
 const handleServerShutDown = async () => {
   try {
-    await disconnectFromDatabase();
+    // await disconnectFromDatabase();
     console.log("Server ShutDown");
     process.exit(0);
   } catch (err) {

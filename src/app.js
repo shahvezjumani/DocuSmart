@@ -12,6 +12,9 @@ app.get("/", (req, res) => {
   res.status(200).json({ name: "shahvez" });
 });
 
-app.use(errorHandler);
+import pdfConvertionRouter from "./routes/pdfConverstion.route.js";
+app.use("/api/v1", pdfConvertionRouter);
+
+// app.use(errorHandler);
 
 export default app;
